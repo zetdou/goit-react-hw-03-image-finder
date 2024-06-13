@@ -1,5 +1,6 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
+import styles from "../styles.module.css";
 
 export default class ImageGalleryItem extends Component {
   static propTypes = {
@@ -17,8 +18,12 @@ export default class ImageGalleryItem extends Component {
     const { webformatURL } = this.props;
 
     return (
-      <li className="gallery-item" onClick={this.handleClick}>
-        <img src={webformatURL} alt="" />
+      <li className={styles.imageGalleryItem} onClick={this.handleClick}>
+        <img
+          className={styles.imageGalleryItemImage}
+          src={webformatURL}
+          alt=""
+        />
       </li>
     );
   }

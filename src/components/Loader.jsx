@@ -1,18 +1,20 @@
 import { Component } from "react";
-import { Circles } from "react-loader-spinner";
+import { TailSpin } from "react-loader-spinner";
+import styles from "../styles.module.css";
 
 export default class Loader extends Component {
   render() {
     return (
-      <div className="loader">
-        <Circles
+      <div className={styles.loader}>
+        <TailSpin
+          visible={true}
           height="80"
           width="80"
-          color="#4fa94d"
-          ariaLabel="circles-loading"
+          color="#3f51b5"
+          ariaLabel="tail-spin-loading"
+          radius="1"
           wrapperStyle={{}}
           wrapperClass=""
-          visible={true}
         />
       </div>
     );
